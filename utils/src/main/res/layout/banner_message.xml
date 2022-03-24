@@ -1,0 +1,94 @@
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/popup"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+>
+    <com.google.android.material.card.MaterialCardView
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/colorSuccess"
+            android:background="@color/colorSuccess"
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="3dp"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="67dp"
+                    android:layout_height="67dp"
+                    android:src="@drawable/info"
+                    android:tint="@color/colorOnWarning"
+                    android:layout_gravity="center"
+                    android:padding="15sp"
+            />
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+            >
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:text="Message de succès"
+                        android:textStyle="bold"
+                        android:gravity="bottom|start"
+                        android:textSize="18sp"
+                        android:autoSizeTextType="uniform"
+                        android:maxLines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/colorOnWarning"
+                        android:id="@+id/bannerTitleContent"
+                        android:layout_marginBottom="3dp"
+                />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Recipe saved successfully into your favorite, you can read it when offline"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/colorOnWarning"
+                        android:id="@+id/bannerTextContent"/>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="onBannerActionClicked"
+                    android:text="S'inscrire"
+                    android:textColor="@color/colorOnWarning"
+                    android:textSize="10sp"
+                    android:maxLines="1"
+                    app:backgroundTint="@color/white"
+                    android:id="@+id/bannerButton"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:visibility="gone"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
